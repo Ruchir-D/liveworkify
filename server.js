@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "./frontend/build")));
 mongoose.connect(process.env.MONGO_URL)
     .then(()=>{
         // Listening
-            app.listen(4000, ()=> {
+            app.listen(process.env.PORT, ()=> {
             console.log("listening");
 })
     }).catch((err)=> {
